@@ -3,3 +3,61 @@ site_url: https://IronMachine4.github.io
 site_author: 李姜俊(IronMachine4)
 theme:
   name: material
+  palette:
+    primary: deep orange
+  language: zh
+  icon: 
+    logo: material/notebook
+  features:
+    - navigation.path
+    - navigation.indexes
+    - content.code.copy
+    - search.suggest
+plugins:
+  - search
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.caret
+  - pymdownx.betterem
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      auto_title: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+nav: 
+  - test: test.md
+extra_javascript:
+  - javascripts/extra.js
+  - https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/javascripts/extra.js  # extra的cdn
+  - https://polyfill.io/v3/polyfill.min.js?features=es6 #Latex支持
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js #Latex支持
+  - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js #忘了
