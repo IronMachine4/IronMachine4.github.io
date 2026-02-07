@@ -1,0 +1,5 @@
+site_name: IronMachine4's Blog
+site_url: https://IronMachine4.github.io
+site_author: 李姜俊(IronMachine4)
+theme:
+  name: material
