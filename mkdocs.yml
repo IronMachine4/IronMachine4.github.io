@@ -4,7 +4,16 @@ site_author: 李姜俊(IronMachine4)
 theme:
   name: material
   palette:
-    primary: deep orange
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: deep orange
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: deep orange
   language: zh
   icon: 
     logo: material/notebook
@@ -12,7 +21,7 @@ theme:
     - navigation.path
     - navigation.indexes
     - content.code.copy
-    - search.suggest
+    # - search.suggest
 plugins:
   - search
 markdown_extensions:
@@ -53,11 +62,16 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-nav: 
-  - test: test.md
 extra_javascript:
   - javascripts/extra.js
   - https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/javascripts/extra.js  # extra的cdn
   - https://polyfill.io/v3/polyfill.min.js?features=es6 #Latex支持
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js #Latex支持
   - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js #忘了
+nav:
+  - 首页: index.md
+  - 算法竞赛知识点: 
+    - algorithm/index.md
+  - 比赛题解: 
+    - competition/index.md
+    - NOI2026 省选线上冬令营: competition/noi-2026-sx-online-wc.md

@@ -10,9 +10,13 @@
         <meta name="author" content="李姜俊(IronMachine4)">
       
       
-        <link rel="canonical" href="https://IronMachine4.github.io/test/">
+        <link rel="canonical" href="https://IronMachine4.github.io/competition/">
       
       
+        <link rel="prev" href="../algorithm/">
+      
+      
+        <link rel="next" href="noi-2026-sx-online-wc/">
       
       
         
@@ -23,7 +27,7 @@
     
     
       
-        <title>test - IronMachine4's Blog</title>
+        <title>比赛题解 - IronMachine4's Blog</title>
       
     
     
@@ -60,6 +64,8 @@
   
     
     
+      
+    
     
     
     
@@ -72,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#h1" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -108,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              test
+              比赛题解
             
           </span>
         </div>
@@ -116,7 +122,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -144,8 +176,6 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -203,44 +233,17 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    test
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    test
+    首页
   
 
     
@@ -249,104 +252,170 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
       
         
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../algorithm/" class="md-nav__link ">
+              
   
+  
+  <span class="md-ellipsis">
+    
+  
+    算法竞赛知识点
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    算法竞赛知识点
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#h2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        h2
-      
-    </span>
-  </a>
   
-    <nav class="md-nav" aria-label="h2">
-      <ul class="md-nav__list">
+    
+    
+      
         
-          <li class="md-nav__item">
-  <a href="#h3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        h3
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="h3">
-      <ul class="md-nav__list">
+          
         
-          <li class="md-nav__item">
-  <a href="#h4" class="md-nav__link">
-    <span class="md-ellipsis">
       
-        h4
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="h4">
-      <ul class="md-nav__list">
         
-          <li class="md-nav__item">
-  <a href="#h5" class="md-nav__link">
-    <span class="md-ellipsis">
       
-        h5
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="h5">
-      <ul class="md-nav__list">
         
-          <li class="md-nav__item">
-  <a href="#h6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        h6
-      
-    </span>
-  </a>
-  
-</li>
         
-      </ul>
-    </nav>
-  
-</li>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
-      </ul>
-    </nav>
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
   
-</li>
+  
+  <span class="md-ellipsis">
+    
+  
+    比赛题解
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-      </ul>
-    </nav>
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
   
-</li>
+    比赛题解
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="noi-2026-sx-online-wc/" class="md-nav__link">
         
-      </ul>
-    </nav>
   
-</li>
-      
-    </ul>
   
-</nav>
+  <span class="md-ellipsis">
+    
+  
+    NOI2026 省选线上冬令营
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -379,81 +448,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#h2" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        h2
+        比赛链接
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="h2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#h3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        h3
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="h3">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#h4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        h4
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="h4">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#h5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        h5
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="h5">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#h6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        h6
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -472,6 +473,48 @@
 
 
 
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    比赛题解
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
 
               
               <article class="md-content__inner md-typeset">
@@ -480,22 +523,12 @@
 
 
 
-<h1 id="h1">h1<a class="headerlink" href="#h1" title="Permanent link">&para;</a></h1>
-<h2 id="h2">h2<a class="headerlink" href="#h2" title="Permanent link">&para;</a></h2>
-<h3 id="h3">h3<a class="headerlink" href="#h3" title="Permanent link">&para;</a></h3>
-<h4 id="h4">h4<a class="headerlink" href="#h4" title="Permanent link">&para;</a></h4>
-<h5 id="h5">h5<a class="headerlink" href="#h5" title="Permanent link">&para;</a></h5>
-<h6 id="h6">h6<a class="headerlink" href="#h6" title="Permanent link">&para;</a></h6>
-<p><strong>strong</strong></p>
-<p><strong>i</strong></p>
-<p><del>s</del></p>
-<div class="arithmatex">\[ 1+1=2 \]</div>
-<div class="arithmatex">\[
-\begin{aligned}
-1+1=&amp;2\\
-2+2=&amp;4
-\end{aligned}
-\]</div>
+<h1 id="_1">比赛题解<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>这里记录一些福建地区 CCF 举办的模拟赛的题解。</p>
+<h2 id="_2">比赛链接<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>2026.02.08 - 2026.02.10：<a href="https://study.1717youxue.com/contests">福建 NOI2026 省选线上冬令营</a></li>
+</ul>
 
 
 
@@ -545,7 +578,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.path", "navigation.indexes", "content.code.copy", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.path", "navigation.indexes", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
