@@ -76,7 +76,7 @@ nav:
     - 数据结构
     - 动态规划:
       - DP 优化:
-        - 翻转递推方向
+        - 翻转递推方向: algorithm/dp/opt/reverse-dp-order.md
   - 比赛题解: 
     - competition/index.md
     - NOI2026 省选线上冬令营: competition/noi-2026-sx-online-wc.md
