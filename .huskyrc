@@ -1,5 +1,0 @@
-{
-  "hooks": {
-    "pre-commit": "mkdocs build"
-  }
-}
