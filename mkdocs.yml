@@ -22,16 +22,11 @@ theme:
     - navigation.path
     - navigation.indexes
     - content.code.copy
-    # - search.suggest
-# plugins:
-#   - search
+    - search.suggest
+plugins:
+  - search
 markdown_extensions:
-  - abbr
-  - attr_list
-  - admonition
-  - def_list
-  - footnotes
-  - md_in_html
+  - extra
   - pymdownx.caret
   - pymdownx.betterem
   - pymdownx.critic
@@ -73,7 +68,8 @@ nav:
   - 首页: index.md
   - 算法竞赛知识点: 
     - algorithm/index.md
-    - 数据结构
+    - 数据结构:
+      - 链表: ds/list.md
     - 动态规划:
       - DP 优化:
         - 翻转递推方向: algorithm/dp/opt/reverse-dp-order.md
