@@ -39,7 +39,7 @@
 
 ## 例题
 
-### [[SNOI2024] 矩阵](https://www.luogu.com.cn/problem/P10061)
+### [P10061 [SNOI2024] 矩阵](https://www.luogu.com.cn/problem/P10061)
 
 #### 题目大意
 

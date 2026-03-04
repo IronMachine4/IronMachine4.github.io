@@ -70,6 +70,7 @@ nav:
     - algorithm/index.md
     - 数据结构:
       - 链表: ds/list.md
+      - 并查集: ds/dsu.md
     - 动态规划:
       - DP 优化:
         - 翻转递推方向: algorithm/dp/opt/reverse-dp-order.md
