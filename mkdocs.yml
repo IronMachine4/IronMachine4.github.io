@@ -69,8 +69,11 @@ nav:
   - 算法竞赛知识点: 
     - algorithm/index.md
     - 数据结构:
-      - 链表: ds/list.md
-      - 并查集: ds/dsu.md
+      - 链表: algorithm/ds/list.md
+      - 并查集: algorithm/ds/dsu.md
+      - 可持久化数据结构:
+        - algorithm/ds/persistent/index.md
+        - 可持久化线段树: algorithm/ds/persistent/persistent-sgt.md
     - 动态规划:
       - DP 优化:
         - 翻转递推方向: algorithm/dp/opt/reverse-dp-order.md
