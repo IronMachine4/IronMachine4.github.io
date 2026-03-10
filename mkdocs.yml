@@ -20,7 +20,6 @@ theme:
     logo: material/notebook
   features:
     - navigation.path
-    - navigation.indexes
     - content.code.copy
     - search.suggest
 plugins:
@@ -67,16 +66,17 @@ extra_javascript:
 nav:
   - 首页: index.md
   - 算法竞赛知识点: 
-    - algorithm/index.md
     - 数据结构:
-      - 链表: algorithm/ds/list.md
-      - 并查集: algorithm/ds/dsu.md
+      - 链表: algo/ds/list.md
+      - 并查集: algo/ds/dsu.md
+      - 线段树:
+        - 吉司机线段树: algo/ds/sgt-beats.md
       - 可持久化数据结构:
-        - algorithm/ds/persistent/index.md
-        - 可持久化线段树: algorithm/ds/persistent/persistent-sgt.md
+        - 可持久化数据结构简介: algo/ds/persistent.md
+        - 可持久化线段树: algo/ds/persistent-sgt.md
     - 动态规划:
       - DP 优化:
-        - 翻转递推方向: algorithm/dp/opt/reverse-dp-order.md
+        - 翻转递推方向: algo/dp/opt/reverse-dp-order.md
   - 比赛题解: 
-    - competition/index.md
-    - NOI2026 省选线上冬令营: competition/noi-2026-sx-online-wc.md
+    - 比赛链接总结: comp/index.md
+    - NOI2026 省选线上冬令营: comp/noi-2026-sx-online-wc.md
