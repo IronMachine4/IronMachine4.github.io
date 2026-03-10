@@ -2,6 +2,6 @@
 
 这里记录一些神秘的算法竞赛知识点，以及一些 FJ 地区，Zhengrui OI 的比赛题解归档。
 
-## 常用资料
+![1274736的洛谷用户卡片](https://card.xycraft.dpdns.org/about?id=1274736)
 
-## 比赛题解
+![1274736的洛谷用户卡片](https://card.xycraft.dpdns.org/practice?id=1274736)

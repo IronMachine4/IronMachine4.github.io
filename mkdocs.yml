@@ -75,8 +75,8 @@ nav:
         - 可持久化数据结构简介: algo/ds/persistent.md
         - 可持久化线段树: algo/ds/persistent-sgt.md
     - 动态规划:
+      - 动态 DP: algo/dp/ddp.md
       - DP 优化:
         - 翻转递推方向: algo/dp/opt/reverse-dp-order.md
   - 比赛题解: 
-    - 比赛链接总结: comp/index.md
     - NOI2026 省选线上冬令营: comp/noi-2026-sx-online-wc.md
