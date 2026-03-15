@@ -79,5 +79,7 @@ nav:
       - 动态 DP: algo/dp/ddp.md
       - DP 优化:
         - 翻转递推方向: algo/dp/opt/reverse-dp-order.md
+    - 图论: 
+      - 最小斯坦纳树: algo/graph/steiner-tree.md
   - 比赛题解: 
     - NOI2026 省选线上冬令营: comp/noi-2026-sx-online-wc.md
