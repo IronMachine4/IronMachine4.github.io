@@ -81,5 +81,8 @@ nav:
         - 翻转递推方向: algo/dp/opt/reverse-dp-order.md
     - 图论: 
       - 最小斯坦纳树: algo/graph/steiner-tree.md
+    - 数学:
+      - 数论:
+        - 二次剩余: algo/math/number-theory/quad-residue.md
   - 比赛题解: 
     - NOI2026 省选线上冬令营: comp/noi-2026-sx-online-wc.md
