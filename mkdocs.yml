@@ -86,5 +86,6 @@ nav:
         - 二次剩余: algo/math/number-theory/quad-residue.md
         - 拓展欧几里得算法: algo/math/number-theory/exgcd.md
         - 中国剩余定理: algo/math/number-theory/crt.md
+        - 狄利克雷卷积: algo/math/number-theory/dirichlet.md
   - 比赛题解: 
     - NOI2026 省选线上冬令营: comp/noi-2026-sx-online-wc.md
