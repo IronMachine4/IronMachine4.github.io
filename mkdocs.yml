@@ -81,6 +81,8 @@ nav:
     - 图论: 
       - 最小斯坦纳树: algo/graph/steiner-tree.md
     - 数学:
+      - 多项式:
+        - 快速傅里叶变换: algo/math/poly/FFT.md
       - 数论:
         - 二次剩余: algo/math/number-theory/quad-residue.md
         - 拓展欧几里得算法: algo/math/number-theory/exgcd.md
