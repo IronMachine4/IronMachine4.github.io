@@ -14,7 +14,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-      primary: deep orange
+      primary: black
   language: zh
   icon: 
     logo: material/notebook
@@ -62,6 +62,8 @@ extra_javascript:
   - https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/javascripts/extra.js  # extra的cdn
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js #Latex支持
   - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js #忘了
+extra_css:
+  - stylesheets/extra.css
 nav:
   - 首页: index.md
   - 算法竞赛知识点: 
@@ -83,6 +85,8 @@ nav:
     - 数学:
       - 多项式:
         - 快速傅里叶变换: algo/math/poly/FFT.md
+        - 快速数论变换: algo/math/poly/NTT.md
+        - 快速沃尔什变换: algo/math/poly/FWT.md
       - 数论:
         - 二次剩余: algo/math/number-theory/quad-residue.md
         - 拓展欧几里得算法: algo/math/number-theory/exgcd.md
