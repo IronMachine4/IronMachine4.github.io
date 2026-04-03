@@ -87,6 +87,7 @@ nav:
         - 快速傅里叶变换: algo/math/poly/FFT.md
         - 快速数论变换: algo/math/poly/NTT.md
         - 快速沃尔什变换: algo/math/poly/FWT.md
+        - 拉格朗日插值法: algo/math/poly/interp.md
       - 数论:
         - 二次剩余: algo/math/number-theory/quad-residue.md
         - 拓展欧几里得算法: algo/math/number-theory/exgcd.md
