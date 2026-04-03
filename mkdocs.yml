@@ -66,7 +66,7 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - 首页: index.md
-  - 算法竞赛知识点: 
+  - 算法知识: 
     - 基础算法:
       - 分治:
         - 根号分治: algo/basic/divide/sqrt-divide.md
@@ -86,6 +86,8 @@ nav:
     - 图论: 
       - 最小斯坦纳树: algo/graph/steiner-tree.md
     - 数学:
+      - 组合数学:
+        - 容斥原理: algo/math/comb/in-exclude.md
       - 多项式:
         - 快速傅里叶变换: algo/math/poly/FFT.md
         - 快速数论变换: algo/math/poly/NTT.md
