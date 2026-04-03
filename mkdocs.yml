@@ -67,6 +67,9 @@ extra_css:
 nav:
   - 首页: index.md
   - 算法竞赛知识点: 
+    - 基础算法:
+      - 分治:
+        - 根号分治: algo/basic/divide/sqrt-divide.md
     - 数据结构:
       - 链表: algo/ds/list.md
       - 并查集: algo/ds/dsu.md
