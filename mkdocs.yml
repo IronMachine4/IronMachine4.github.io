@@ -83,6 +83,8 @@ nav:
       - 动态 DP: algo/dp/ddp.md
       - DP 优化:
         - 翻转递推方向: algo/dp/opt/reverse-dp-order.md
+    - 字符串:
+      - AC 自动机: algo/string/ac-automaton.md
     - 图论: 
       - 最小斯坦纳树: algo/graph/steiner-tree.md
     - 数学:
