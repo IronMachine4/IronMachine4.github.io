@@ -393,3 +393,125 @@ $$
             return 0;
         }
         ```
+
+## Min-max 容斥
+
+设我们有一个序列 $x$，长度为 $n$，再令 $S=\{1,2,\dots,n\}$ 那我们有：
+
+$$
+\def\op{\operatorname}
+\begin{gather}
+\max_{i\in S}x_{i}=\sum_{T\subseteq S}(-1)^{|T|-1}\min_{j\in T}x_{j}\\
+\min_{i\in S}x_{i}=\sum_{T\subseteq S}(-1)^{|T|-1}\max_{j\in T}x_{j}\\
+\underset{i\in S}{\op{kthmax}}x_{i}=\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}\min_{j\in T}x_j\\
+\underset{i\in S}{\op{kthmin}}x_{i}=\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}\max_{j\in T}x_j
+\end{gather}
+$$
+
+最关键的是，如果 $x_i$ 为随机变量，那么以上公式对期望也是成立的：
+
+$$
+\def\op{\operatorname}
+\def\bracket#1{\left(#1\right)}
+\begin{gather}
+E\bracket{\max_{i\in S}x_{i}}=\sum_{T\subseteq S}(-1)^{|T|-1}E\bracket{\min_{j\in T}x_{j}}\\
+E\bracket{\min_{i\in S}x_{i}}=\sum_{T\subseteq S}(-1)^{|T|-1}E\bracket{\max_{j\in T}x_{j}}\\
+E\bracket{\underset{i\in S}{\op{kthmax}}x_{i}}=\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}E\bracket{\min_{j\in T}x_j}\\
+E\bracket{\underset{i\in S}{\op{kthmin}}x_{i}}=\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}E\bracket{\max_{j\in T}x_j}
+\end{gather}
+$$
+
+???+ note "P4707 重返现世"
+
+    $n$ 个元素，每个元素有权值 $p_i$，令 $m=\sum_{i=1}^{n}p_i$，则每过一个单位时间有 $\frac{p_i}{m}$ 的概率获得第 $i$ 个元素。求收集任意 $k$ 种不同元素的期望用时。$1\le n,m,k\le 1000$，$n-k\le 10$。
+
+    ??? note "题解"
+
+        注意到对于每种元素我们只关心其首次出现的时间。令 $x_i$ 为首次收集到第 $i$ 种元素的用时（为一个随机变量），则我们求的是 $E(\op{kthmin}_{i=1}^{n} x_i$)。注意到数据范围中 $n-k$ 的值较小，而第 $k$ 小相当于第 $n-k+1$ 大，我们用 $n-k+1$ 取代原本的 $k$，则我们求的是 $E(\op{kthmax}_{i=1}^{n} x_i)$
+
+        使用 min-max 容斥公式：（$S=[1,n]\cap\mathbb{Z}$，即全集）
+
+        $$
+        E\bracket{\underset{i\in S}{\op{kthmax}}x_{i}}=\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}E\bracket{\min_{j\in T}x_j}
+        $$
+
+        思考 $E\bracket{\min_{j\in T}x_j}$ 的期望意义：首次获得 $T$ 中任意元素的期望时间。由于在每个时刻获得 $T$ 中元素的概率为 $\frac{\sum_{i\in T}p_i}{m}$，则期望值为 $\frac{m}{\sum_{i\in T}{p_i}}$。
+
+        代入公式有：
+
+        $$
+        E\bracket{\underset{i\in S}{\op{kthmax}}x_{i}}=\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}\frac{m}{\sum_{i\in T}{p_i}}
+        $$
+
+        注意到 $n$ 较大，枚举子集是不可接受的。发现 $\sum_{i\in T}p_i$ 像选取元素的“重量”之和，考虑使用类似背包 DP 的方式，令 $f(i,j)$ 表示做到前 $i$ 个元素，对于所有 $T$ 中元素 $p$ 值之和为 $j$ 的 $T$ 的系数（$\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}$）之和。
+
+        当第 $i$ 个元素不加入子集时，有 $f(i,j)\leftarrow f(i-1,j)$，但当第 $i$ 个元素选择加入时，$|T|$ 会变化。注意到组合数有递推公式 $\binom{n}{m}=\binom{n-1}{m}+\binom{n-1}{m-1}$，考虑将 $k$ 作为一维状态加入 DP。则：
+
+        $$
+        \def\red#1{\textcolor{red}{#1}}
+        \begin{aligned}
+        f(i,j,k)&=\sum_{T\subseteq [1,i],\sum_{x\in T}p_x=j}(-1)^{|T|-k}\binom{|T|-1}{k-1}\\
+        &=\sum_{T\subseteq [1,i],\sum_{x\in T}p_x=j,\red{i\in T}}(-1)^{|T|-k}\binom{|T|-1}{k-1}+f(i-1,j,k)\\
+        &=\sum_{T\subseteq [1,i],\sum_{x\in T}p_x=j,\red{i\in T}}-(-1)^{(|T|-1)-k}\bracket{\binom{(|T|-1)-1}{k-1}+\binom{(|T|-1)-1}{k-2}}+f(i-1,j,k)\\
+        &=\sum_{T\subseteq [1,i],\sum_{x\in T}p_x=j,\red{i\in T}}-(-1)^{(|T|-1)-k}\binom{(|T|-1)-1}{k-1}+\sum_{T\subseteq [1,i],\sum_{x\in T}p_x=j,\red{i\in T}}(-1)^{(|T|-1)-(k-1)}\binom{(|T|-1)-1}{(k-1)-1}+f(i-1,j,k)\\
+        &=\sum_{T\subseteq [1,\red{i-1}],\sum_{x\in T}p_x=j\red{-p_i}}-(-1)^{|T|-k}\binom{|T|-1}{k-1}+\sum_{T\subseteq [1,\red{i-1}],\sum_{x\in T}p_x=j\red{-p_i}}(-1)^{|T|-(k-1)}\binom{|T|-1}{(k-1)-1}+f(i-1,j,k)\\
+        &=\boxed{-f(i-1,j-p_i,k)+f(i-1,j-p_i,k-1)+f(i-1,j,k)}
+        \end{aligned}
+        $$
+
+        初值 $f(0,0,0)=1$，时间复杂度 $O(nmk)$。
+
+    ??? note "参考代码"
+
+        ```cpp
+        //输出 long long 的时候用 %lld 了吗 ~~~
+        //交之前改 freopen 了吗 ~~~
+        //改完代码及时交了吗 ~~~
+        //算了内存不会 MLE 了吗 ~~~
+        //T1 卡住看 T2 了吗 ~~~
+        //树边存储开两倍了吗 ~~~
+        //测时间的时候关掉 sanitizer 了吗 ~~~
+        #include<bits/stdc++.h>
+        #define N 1005
+        #define M 10005
+        #define K 15
+        #define mod 998244353
+        using namespace std;
+        char buf[1<<23],*p1=buf,*p2=buf;
+        #define getchar() (p1==p2&&(p2=(p1=buf)+fread(buf,1,1<<21,stdin),p1==p2)?EOF:*p1++)
+        inline int read()
+        {
+            int x=0,f=1;
+            char ch=getchar();
+            while(!isdigit(ch))
+            {
+                if(ch=='-') f=-1;
+                ch=getchar();
+            }
+            while(isdigit(ch)) x=x*10+(ch^48),ch=getchar();
+            return x*f;
+        }
+        int n,m,k;
+        long long p[N],f[M][K],inv[M],ans;
+        int main()
+        {
+            n=read(),k=n-read()+1,m=read();
+            for(int i=1;i<=n;i++) p[i]=read();
+            inv[0]=inv[1]=1;
+            for(int i=2;i<=m;i++) inv[i]=inv[mod%i]*(mod-mod/i)%mod;
+            f[0][0]=1;
+            for(int i=1;i<=n;i++)
+            {
+                for(int j=m;j>=p[i];j--)
+                {
+                    for(int t=k;t>=1;t--)
+                    {
+                        f[j][t]=(f[j][t]+f[j-p[i]][t-1]-f[j-p[i]][t]+mod)%mod;
+                    }
+                }
+            }
+            for(int i=m;i>=0;i--) ans=(ans+f[i][k]*m%mod*inv[i]%mod)%mod;
+            printf("%lld\n",ans);
+            return 0;
+        }
+        ```
