@@ -102,5 +102,5 @@ nav:
         - 狄利克雷卷积: algo/math/number-theory/dirichlet.md
         - 杜教筛: algo/math/number-theory/du.md
         - Min_25 筛: algo/math/number-theory/min25.md
-  - 比赛题解: 
+  - 解题报告: 
     - NOI2026 省选线上冬令营: comp/noi-2026-sx-online-wc.md
